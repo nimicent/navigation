@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Open Source Advocates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://dev.mavo.io/dist/mavo.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+  
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"><img style="width:5vw;" src="https://s3.us.cloud-object-storage.appdomain.cloud/ibmdev/technologies/continuous-delivery-icon.svg"></a>
+</div>
+
+<div id="container">
+
+  <p><a href="https://www.developer.ibm.com" target="_blank">
+       IBM DEVELOPER
+  </a></p>
+
+<main mv-app="carousel"
+		mv-storage="dev.json"
+		mv-plugins="cropper">
+
+	<meta property="timer" content="[seconds($now) mod (imageCount * delay) + 1]">
+
+	<section class="carousel"
+				style="background-image: url([get(source, indBg)]);">
+		<meta property="indBg"
+			content="[ceil(((seconds($now) + 2) mod (imageCount * delay) + 1) / delay) - 1]">
+		
+		<meta property="ind" content="[ceil(timer / delay) - 1]">
+		<img src="[get(source, ind)]"
+			  alt=""
+			  class="[if(timer mod delay = 0, 'fade')]">
+		
+		<aside>
+			<span mv-multiple="thumbnail"
+					mv-value="1 .. imageCount"
+					class="[if($index = ind, 'active')]"
+					style="background-image: url([get(source, $index)]);"></span>
+		</aside>
+	</section>
+	
+	<section class="settings">
+		<fieldset>
+			<legend>Settings</legend>
+			<p>
+				The widget can display
+				<span property="maxCount"
+						mv-edit-type="number"
+						mv-edit-min="[max(2, imageCount)]"
+						mv-edit-max="10"
+						mv-edit-value="5"
+						title="Change number of images">5</span> images
+				with
+				<span property="delay"
+						mv-edit-type="number"
+						mv-edit-min="3"
+						mv-edit-max="10"
+						mv-edit-value="5"
+						title="Change delay">5</span>s delay.
+			</p>
+			
+			<article mv-multiple="image">
+				<img src="" alt="" property="source">
+			</article>
+			
+			<meta property="imageCount" content="[count(image)]">
+			
+			<aside hidden="[imageCount >= maxCount]">
+				<button class="mv-add-image">
+					+ Add image
+				</button>
+			</aside>
+		</fieldset>
+	</section>
+
+</main>
+
+    <script src='https://dev.mavo.io/dist/mavo.es5.js'></script>
+
+
+ <div class="wrapper">
+        <p class="bird">FIND OUR OPEN SOURCE CONTRIBUTIONS EVERYWHERE</p>
+        <div class="grid">
+            <div class="grid-item">
+                <figure>
+                    <a href="https://dribbble.com/ibm-design" target="_blank"><img src="https://www.searchpng.com/wp-content/uploads/2019/02/Dribbble-PNG-icon.png" alt=""></a>
+                    <figcaption>DRIBBBLE</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://github.com/IBM" target="_blank"><img src="https://icon-library.net/images/github-icon-white/github-icon-white-5.jpg" alt=""></a>
+                    <figcaption>GITHUB</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://www.youtube.com/channel/UCUm6InQvGI9-6vo1teGWINA" target="_blank"><img src="https://freeiconshop.com/wp-content/uploads/edd/youtube-flat.png" alt=""></a>
+                    <figcaption>YOUTUBE</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://www.twitch.tv/ibmdeveloper" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/343_Twitch_logo-512.png" alt=""></a>
+                    <figcaption>TWITCH</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://dev.to/ibmdeveloper" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/84_Dev-512.png" alt=""></a>
+                    <figcaption>DEV</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://open.edx.org/get-started/get-started-self-managed/" target="_blank"><img src="https://i.imgur.com/LB9yGeX.png" alt=""></a>
+                    <figcaption>Open EdX</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://twitter.com/ibmdeveloper?lang=en" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/twitter-512.png" alt=""></a>
+                    <figcaption>TWITTER</figcaption>
+                </figure>
+            </div>
+
+            <div class="grid-item">
+                <figure>
+                    <a href="https://netsplit.de/channels/details.php?room=%23ibmcloud&net=freenode" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/irc_protocol.png" alt=""></a>
+                    <figcaption>IRC</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <a href="https://codepen.io/search/pens?q=ibm&page=1&order=popularity&depth=everything" target="_blank"><img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697046-codepen-256.png" alt=""></a>
+                    <figcaption>CODEPEN</figcaption>
+                </figure>
+            </div>
+            
+            <div class="grid-item">
+                <figure>
+                    <a href="https://www.coursera.org/courses?query=&page=1&configure%5BclickAnalytics%5D=true&indices%5Bprod_all_products%5D%5BrefinementList%5D%5Bpartners%5D%5B0%5D=IBM&indices%5Bprod_all_products%5D%5Bpage%5D=1&indices%5Bprod_all_products%5D%5Bconfigure%5D%5BclickAnalytics%5D=true&indices%5Bprod_all_products%5D%5Bconfigure%5D%5BhitsPerPage%5D=10" target="_blank"><img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/38849/preview.svg" alt=""></a>
+                    <figcaption>Coursera</figcaption>
+                </figure>
+            </div>
+                       <div class="grid-item">
+                <figure>
+                    <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Slack-512.png" alt=""></a>
+                    <figcaption>SLACK</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+    
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
+
+
+
+
+

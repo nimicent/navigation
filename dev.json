@@ -1,0 +1,21 @@
+{
+	"maxCount": 6,
+	"image": [
+		{
+			"source": "https://i.ytimg.com/vi/7PdaLnKOpVs/maxresdefault.jpg"
+		},
+		{
+			"source": "https://res.cloudinary.com/practicaldev/image/fetch/s--ax7Yj9Uz--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/yflq3gylsbgtfy4l0dwi.gif"
+		},
+		{
+			"source": "https://thumbs.gfycat.com/FluidAfraidIberianemeraldlizard-size_restricted.gif"
+		},
+		{
+			"source": "http://developer.ibm.com/code/wp-content/uploads/sites/118/2018/03/demo.gif"
+		},
+		{
+			"source": "https://developer.ibm.com/developer/blogs/win-a-drone-program-a-drone-change-the-world/images/dronedrop2019.jpg"
+		}
+	],
+	"delay": 5
+}
